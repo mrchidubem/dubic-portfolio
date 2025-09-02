@@ -9,8 +9,20 @@
   <meta property="og:title" content="Joseph Chidubem Okafor | Portfolio">
   <meta property="og:description" content="Explore the portfolio of Joseph Chidubem Okafor, a Full Stack Software Engineer and Cloud Architect.">
   <meta property="og:image" content="images/og-image.jpg">
+  <meta name="robots" content="index, follow">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#0f0f0f" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#fdf6e3" media="(prefers-color-scheme: light)">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Joseph Chidubem Okafor | Portfolio">
+  <meta name="twitter:description" content="Explore the portfolio of Joseph Chidubem Okafor, a Full Stack Software Engineer and Cloud Architect.">
+  <meta name="twitter:image" content="images/og-image.jpg">
   <title>Joseph | Portfolio</title>
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="canonical" href="https://dubicventures.vercel.app/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://images.pexels.com">
   <link rel="preload" href="images/9.avif" as="image">
   <link rel="preload" href="images/dube.jpg" as="image">
   <link rel="preload" href="images/carecycle.webp" as="image">
@@ -18,8 +30,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/all.min.css">
   <link rel="stylesheet" href="css/everystyle.css">
+  <script src="javascript/script.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Joseph Chidubem Okafor",
+    "jobTitle": "Full Stack Software Engineer, Cloud Architect",
+    "url": "https://dubicventures.vercel.app/",
+    "image": "https://dubicventures.vercel.app/images/dube.jpg",
+    "sameAs": [
+      "https://linkedin.com/in/dubicventures",
+      "https://github.com/mrchidubem",
+      "https://x.com/ChidubemOkafo17"
+    ]
+  }
+  </script>
 </head>
 <body>
+  <noscript>This site works best with JavaScript enabled.</noscript>
   <nav aria-label="Main navigation">
     <a href="#" class="circle-logo">
       <div class="circle">D</div>
@@ -84,7 +113,7 @@
     <h2 id="projects-heading">Projects</h2>
     <div class="project-grid">
       <div class="project-item">
-        <div class="project-image" style="background-image: url('images/carecycle.webp');"></div>
+        <div class="project-image lazy-bg" data-bg="images/carecycle.webp" aria-label="CareCycle project image"></div>
         <h3>Care Cycle: Personalized Healthcare Platform</h3>
         <p>A Django-based web app for managing patient care cycles, with real-time data integration and secure authentication.</p>
         <div class="tech-badges">
@@ -92,10 +121,10 @@
           <span class="tech-badge">JavaScript</span>
           <span class="tech-badge">MongoDB</span>
         </div>
-        <a href="https://hospital-management-app-web.vercel.app/" target="_blank" aria-label="View CareCycle project">View Project</a>
+        <a href="https://hospital-management-app-web.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="View CareCycle project">View Project</a>
       </div>
       <div class="project-item">
-        <div class="project-image" style="background-image: url('https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg');"></div>
+        <div class="project-image lazy-bg" data-bg="https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg" aria-label="Airbnb clone project image"></div>
         <h3>Airbnb Clone (In Progress)</h3>
         <p>A scalable web application built with Django and JavaScript, featuring user authentication, property listings, and booking functionality. Reduced load time by 20% with optimized APIs.</p>
         <div class="tech-badges">
@@ -103,10 +132,10 @@
           <span class="tech-badge">JavaScript</span>
           <span class="tech-badge">MySQL</span>
         </div>
-        <a href="https://github.com/mrchidubem" target="_blank" aria-label="View Airbnb-Clone project">View Project</a>
+        <a href="https://github.com/mrchidubem" target="_blank" rel="noopener noreferrer" aria-label="View Airbnb-Clone project">View Project</a>
       </div>
       <div class="project-item">
-        <div class="project-image" style="background-image: url('images/shell.png');"></div>
+        <div class="project-image lazy-bg" data-bg="images/shell.png" aria-label="Simple Shell project image"></div>
         <h3>Simple Shell</h3>
         <p>A custom Unix command-line interpreter built from scratch as part of the ALX Software Engineering program.</p>
         <div class="tech-badges">
@@ -114,7 +143,7 @@
           <span class="tech-badge">Linux System Calls</span>
           <span class="tech-badge">GCC</span>
         </div>
-        <a href="https://github.com/mrchidubem" target="_blank" aria-label="View Simple-Shell project">View Project</a>
+        <a href="https://github.com/mrchidubem" target="_blank" rel="noopener noreferrer" aria-label="View Simple-Shell project">View Project</a>
       </div>
     </div>
   </section>
@@ -259,7 +288,7 @@
 
   <section class="contact" id="contact" role="region" aria-labelledby="contact-heading">
     <h2 id="contact-heading">Contact Me</h2>
-    <form>
+    <form id="contact-form">
       <div class="form-group">
         <input type="text" id="name" placeholder=" " required aria-label="Your name">
         <label for="name">Name</label>
@@ -290,9 +319,9 @@
 
   <footer role="contentinfo">
     <div class="social-icons">
-      <a href="https://linkedin.com/in/dubicventures" target="_blank" aria-label="LinkedIn profile"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://github.com/mrchidubem" target="_blank" aria-label="GitHub profile"><i class="fab fa-github"></i></a>
-      <a href="https://x.com/ChidubemOkafo17" target="_blank" aria-label="Twitter profile"><i class="fab fa-twitter"></i></a>
+      <a href="https://linkedin.com/in/dubicventures" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/mrchidubem" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="fab fa-github"></i></a>
+      <a href="https://x.com/ChidubemOkafo17" target="_blank" rel="noopener noreferrer" aria-label="Twitter profile"><i class="fab fa-twitter"></i></a>
       <a href="mailto:mrchidubem8@gmail.com" aria-label="Email Joseph"><i class="fas fa-envelope"></i></a>
     </div>
     <p>&copy; 2025 Joseph Chidubem Okafor. All rights reserved.</p>
