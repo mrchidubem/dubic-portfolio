@@ -133,23 +133,33 @@ main {
   font-size: 16px;
   color: #b0b0b0;
   max-width: 700px;
-  margin: 0 auto;
+  margin: 0 auto 60px;
   line-height: 1.6;
   font-weight: 400;
 }
 
+.about-content-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: start;
+}
+
 /* Skills Section */
 .skills-section {
-  padding: 80px 0;
-  background-color: #1a1a1a;
+  text-align: left;
+  background: none;
+  padding: 0;
 }
 
 .skills-heading {
   font-size: 28px;
   font-weight: 600;
   color: #ffffff;
-  text-align: center;
-  margin-bottom: 50px;
+  text-align: left;
+  margin-bottom: 30px;
   letter-spacing: -0.5px;
 }
 
@@ -157,8 +167,8 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 15px;
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 100%;
+  margin: 0;
 }
 
 .skill-tag {
@@ -181,8 +191,8 @@ main {
 
 /* Philosophy Section */
 .philosophy-section {
-  padding: 80px 0;
-  text-align: center;
+  text-align: left;
+  padding: 0;
 }
 
 .philosophy-heading {
@@ -196,8 +206,8 @@ main {
 .philosophy-description {
   font-size: 16px;
   color: #b0b0b0;
-  max-width: 700px;
-  margin: 0 auto;
+  max-width: 100%;
+  margin: 0;
   line-height: 1.6;
   font-weight: 400;
 }
@@ -205,7 +215,7 @@ main {
 /* Experience Section */
 .experience-section {
   padding: 80px 0;
-  background-color: #1a1a1a;
+  background: none;
 }
 
 .experience-heading {
@@ -696,6 +706,11 @@ main {
 @media (max-width: 768px) {
   .nav-menu {
     display: none;
+  }
+  
+  .about-content-row {
+    grid-template-columns: 1fr;
+    gap: 50px;
   }
   
   .contact-grid {
