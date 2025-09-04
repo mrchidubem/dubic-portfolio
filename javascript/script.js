@@ -265,3 +265,15 @@ if (!document.querySelector('#slideOutRight-styles')) {
   `;
   document.head.appendChild(style);
 }
+
+// Live Code buttons: open in new tab securely
+document.querySelectorAll('.live-code-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    const url = button.getAttribute('data-live-url');
+    if (!url) return;
+    const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
+    if (newWindow) {
+      newWindow.opener = null;
+    }
+  });
+});
